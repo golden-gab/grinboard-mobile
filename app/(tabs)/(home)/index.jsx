@@ -13,6 +13,7 @@ export default function HomeScreen() {
         <Page>
             <Header title={"Bienvenue"} icon={"notifications-outline"} number={2}/>
             <Categories/>
+            <Text></Text>
             <Best/>
             <Best/>
         </Page>

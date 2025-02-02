@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     categorieBox: {
         backgroundColor: colors.gray,
         color: "white",
-        width: 168,
+        width: "100%",
         borderRadius: borderRadius.small,
         padding: spacing.md,
         display:"flex",

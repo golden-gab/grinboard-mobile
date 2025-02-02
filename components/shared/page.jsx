@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     contentContainer: {
-        padding: spacing.lg,
+        padding: spacing.md,
        
     },
 });

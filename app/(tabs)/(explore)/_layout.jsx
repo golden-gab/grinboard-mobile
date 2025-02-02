@@ -6,8 +6,9 @@ export default function ExploreLayout() {
         <Stack
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "#11345a",
+                    backgroundColor: "#000",
                 },
+                headerShown:false,
                 headerTintColor: "#fff",
                 headerTitleStyle: {
                     fontWeight: "bold",
@@ -15,7 +16,8 @@ export default function ExploreLayout() {
                 
             }}
         >
-            <Stack.Screen name="index" options={{ headerShown: false }}/>
+            <Stack.Screen name="index" />
+            <Stack.Screen name="annonces" />
         </Stack>
     );
 }

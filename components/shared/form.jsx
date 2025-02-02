@@ -1,6 +1,7 @@
 import { TextInput, View, Picker, StyleSheet, Text } from "react-native";
 import { borderRadius, colors, spacing, typography } from "../../style";
 import RNPickerSelect from 'react-native-picker-select';
+import { Ionicons } from "@expo/vector-icons";
 export function Input({
     label,
     placeholder,
@@ -9,10 +10,12 @@ export function Input({
     onChange,
     required,
     error,
+    icon,
+    isSecure,
     ...props
 }) {
     return (
-        <View style={styles.container}>
+        <View style={styles.inputContainer}>
             {label && (
                 <Text style={styles.label}>
                     {label}{" "}
@@ -27,9 +30,12 @@ export function Input({
                 defaultValue={value}
                 keyboardType={type}
                 cursorColor={colors.primary}
+                secureTextEntry={isSecure}
                 style={[styles.input, error ? styles.inputError : null]}
                 {...props}
             />
+            {icon && <Ionicons name={icon} size={typography.fontSizeLarge} style={styles.inputIcon}/>}
+            
             {error ? <Text style={styles.errorText}>{error}</Text> : null}
         </View>
     );
@@ -44,7 +50,7 @@ export function Select({
     value,
 }) {
     return (
-        <View style={styles.container}>
+        <View style={styles.inputContainer}>
             {label && (
                 <Text style={styles.label}>
                     {label}{" "}
@@ -72,8 +78,9 @@ export function Select({
 }
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: spacing.sm,
+    inputContainer: {
+        position: "relative",
+        marginTop: spacing.xs,
         gap: spacing.xs,
     },
     label: {
@@ -88,9 +95,9 @@ const styles = StyleSheet.create({
     },
     input: {
         borderColor: colors.text,
-        borderWidth: 1,
-        borderStyle: "solid",
+      
         borderRadius: borderRadius.medium,
+        backgroundColor:colors.gray,
         fontSize: typography.fontSizeMedium,
         padding: spacing.sm,
         height: 50,
@@ -101,4 +108,9 @@ const styles = StyleSheet.create({
     errorText: {
         color: colors.danger,
     },
+    inputIcon:{
+        position: 'absolute',
+        right: 0, // Positionnez l'icône à droite
+        top: '40%', // Centrez verticalement
+    }
 });

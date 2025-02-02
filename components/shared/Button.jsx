@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, StyleSheet, Pressable } from 'react-native';
 import { borderRadius, colors, spacing, typography } from '../../style';
 
-const Button = ({children , onPress,style}) => {
+const Button = ({title , onPress,style}) => {
     return (
         <Pressable style={[styles.button,style]} onPress={onPress}>
-            <Text style={styles.text}>{children}</Text>
+            <Text style={styles.text}>{title}</Text>
         </Pressable>
     );
 }
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
         fontSize:typography.fontSizeMedium,
         color:"white",
         textAlign:"center",
+        fontWeight:"bold",
     }
 })

@@ -1,31 +1,41 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { colors, spacing, typography, borderRadius } from "../../../style.js";
 import Title from "../../../components/shared/title.jsx";
-import Ionicons from '@expo/vector-icons/Ionicons';
+import Page from "../../../components/shared/page.jsx";
+import Header from "../../../components/shared/header.jsx";
+import AnnonceCard from "../../../components/shared/annonceCard.jsx";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function ExploreScreen() {
     return (
-        <View style={style.container}>
-            <ScrollView contentContainerStyle={style.header}>
-                <Title>Explorer</Title>
-                <Ionicons name="search" size={typography.fontSizeLarge} color="black" />
+        <Page>
+            <Header title={"Explorer"} icon={"search"} />
+            <ScrollView contentContainerStyle={style.list}>
+                <View style={style.listItem}>
+                    <AnnonceCard />
+                </View>
+                <View style={style.listItem}>
+                    <AnnonceCard />
+                </View>
+                <View style={style.listItem}>
+                    <AnnonceCard />
+                </View>
+                <View style={style.listItem}>
+                    <AnnonceCard />
+                </View>
             </ScrollView>
-        </View>
+        </Page>
     );
 }
 
 const style = StyleSheet.create({
-    container: {
-        padding: spacing.lg,
-        display: "flex",
-        flex: 1,
-        backgroundColor: colors.background,
+    listItem: {
+        width: "100%", // Ajustez la largeur pour deux éléments par ligne
+        padding: spacing.sm, // Optionnel: ajoutez du padding pour l'espacement
     },
-
-    header :{
-        display: "flex",
-        flexDirection: "row", // Aligne les éléments horizontalement
-        justifyContent:"space-between",
-        alignItems:"center"
+    list: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: "space-between", // Optionnel: ajustez l'espacement entre les éléments
     },
 });

@@ -6,6 +6,7 @@ import { colors, typography, spacing } from "../../style.js";
 export default function TabLayout() {
     return (
         <Tabs
+            initialRouteName="(home)" 
             screenOptions={{
                 headerShown: false,
                
@@ -18,9 +19,8 @@ export default function TabLayout() {
                     height: 60
                 }
             }}
-            initialRouteName="(home)"
         >
-             <Tabs.Screen
+             {/* <Tabs.Screen
                 name="(home)"
                 options={{
                     title: "Accueil",
@@ -75,7 +75,7 @@ export default function TabLayout() {
                         />
                     ),
                 }}
-            />
+            /> */}
         </Tabs>
     );
 }
