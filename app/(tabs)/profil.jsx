@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Link, useRouter } from "expo-router";
-import { colors, spacing, typography, borderRadius } from "../../../style.js";
-import Title from "../../../components/shared/title.jsx";
+import { colors, spacing, typography, borderRadius } from "../../style.js";
+import Title from "../../components/shared/title.jsx";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Page from "../../../components/shared/page.jsx";
-import Header from "../../../components/shared/header.jsx";
-import ImgPicker from "../../../components/shared/imagePicker.jsx";
-import ProfilLine from "../../../components/profil/profilLine.jsx";
-import Button from "../../../components/shared/Button.jsx";
+import Page from "../../components/shared/page.jsx";
+import Header from "../../components/shared/header.jsx";
+import ImgPicker from "../../components/shared/imagePicker.jsx";
+import ProfilLine from "../../components/profil/profilLine.jsx";
+import Button from "../../components/shared/Button.jsx";
 
 
 export default function ProfilScreen() {
@@ -22,12 +22,17 @@ export default function ProfilScreen() {
                 <ProfilLine
                     title={"Mes informations "}
                     icon={"id-card-outline"}
-                    link="/informations"
+                    link="/profil/informations"
                 />
                 <ProfilLine
                     title={"Mes annonces"}
                     icon={"mic-outline"}
-                    link="/mesAnnonces"
+                    link="/profil/mesAnnonces"
+                />
+                <ProfilLine
+                    title={"Favoris"}
+                    icon={"bookmark-outline"}
+                    link="/profil/favoris"
                 />
             </View>
 

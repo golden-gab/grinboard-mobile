@@ -29,7 +29,7 @@ export function SubTitle({ children, style }) {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: typography.fontSizeLarge,
+        fontSize: 20,
         fontWeight: "bold",
         textAlign: "center",
     },

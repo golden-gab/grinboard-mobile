@@ -1,31 +1,27 @@
 import { Tabs } from "expo-router";
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { View, Text, StyleSheet } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { colors, typography, spacing } from "../../style.js";
 
 export default function TabLayout() {
     return (
         <Tabs
-            initialRouteName="(home)" 
             screenOptions={{
                 headerShown: false,
-               
                 tabBarActiveTintColor: colors.primary,
-                tabBarLabelStyle:{
-                    fontSize:typography.fontSizeSmall
+                tabBarLabelStyle: {
+                    fontSize: typography.fontSizeSmall,
                 },
-                tabBarStyle:{
+                tabBarStyle: {
                     paddingVertical: spacing.lg,
-                    height: 60
-                }
+                    height: 60,
+                },
             }}
         >
-             {/* <Tabs.Screen
-                name="(home)"
+            <Tabs.Screen
+                name="index"
                 options={{
                     title: "Accueil",
-                    // tabBarActiveBackgroundColor:colors.primary,
-                    tabBarIcon: ({focused,color}) => (
+                    tabBarIcon: ({ color }) => (
                         <Ionicons
                             name="home-outline"
                             size={typography.fontSizeLarge}
@@ -35,11 +31,10 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="(post)"
+                name="post"
                 options={{
                     title: "Publier",
-                    // tabBarActiveBackgroundColor:colors.primary,
-                    tabBarIcon: ({focused,color}) => (
+                    tabBarIcon: ({ color }) => (
                         <Ionicons
                             name="add-circle-outline"
                             size={typography.fontSizeLarge}
@@ -49,11 +44,10 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="(explore)"
+                name="explore"
                 options={{
                     title: "Explorer",
-                    // tabBarActiveBackgroundColor:colors.primary,
-                    tabBarIcon: ({focused,color}) => (
+                    tabBarIcon: ({ color }) => (
                         <Ionicons
                             name="search"
                             size={typography.fontSizeLarge}
@@ -62,12 +56,11 @@ export default function TabLayout() {
                     ),
                 }}
             />
-             <Tabs.Screen
-                name="(profil)"
+            <Tabs.Screen
+                name="profil"
                 options={{
                     title: "Profil",
-                    // tabBarActiveBackgroundColor:colors.primary,
-                    tabBarIcon: ({focused,color}) => (
+                    tabBarIcon: ({ color }) => (
                         <Ionicons
                             name="person-outline"
                             size={typography.fontSizeLarge}
@@ -75,7 +68,7 @@ export default function TabLayout() {
                         />
                     ),
                 }}
-            /> */}
+            />
         </Tabs>
     );
 }

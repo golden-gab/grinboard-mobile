@@ -4,7 +4,7 @@ import { colors, spacing, typography, borderRadius } from "../../style.js";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Link } from "expo-router";
 
-const AnnonceCard = ({ link = "/annonces/1" }) => {
+const AnnonceCard = ({ link = "/expore/details/1" }) => {
     return (
         <Link href={link}>
             <View style={styles.annonceCard}>

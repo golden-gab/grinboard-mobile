@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Link } from "expo-router";
-import { colors, spacing, typography, borderRadius } from "../../../style.js";
-import Title from "../../../components/shared/title.jsx";
-import Categories from "../../../components/home/categories.jsx"
-import Best from "../../../components/home/best.jsx"
+import { colors, spacing, typography, borderRadius } from "../../style.js";
+import Title from "../../components/shared/title.jsx";
+import Categories from "../../components/home/categories.jsx"
+import Best from "../../components/home/best.jsx"
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Header from "../../../components/shared/header";
-import Page from "../../../components/shared/page";
+import Header from "../../components/shared/header.jsx";
+import Page from "../../components/shared/page.jsx";
 
 export default function HomeScreen() {
     return (

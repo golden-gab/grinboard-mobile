@@ -12,6 +12,7 @@ export function Input({
     error,
     icon,
     isSecure,
+    style,
     ...props
 }) {
     return (
@@ -31,7 +32,8 @@ export function Input({
                 keyboardType={type}
                 cursorColor={colors.primary}
                 secureTextEntry={isSecure}
-                style={[styles.input, error ? styles.inputError : null]}
+                multiline={true}
+                style={[styles.input, error ? styles.inputError : null,style]}
                 {...props}
             />
             {icon && <Ionicons name={icon} size={typography.fontSizeLarge} style={styles.inputIcon}/>}
@@ -95,12 +97,13 @@ const styles = StyleSheet.create({
     },
     input: {
         borderColor: colors.text,
-      
+        
         borderRadius: borderRadius.medium,
         backgroundColor:colors.gray,
-        fontSize: typography.fontSizeMedium,
-        padding: spacing.sm,
-        height: 50,
+        // fontSize: typography.fontSizeMedium,
+        paddingVertical: spacing.md,
+        paddingHorizontal: spacing.sm,
+        // minHeight: 45,
     },
     inputError: {
         borderColor: colors.danger,

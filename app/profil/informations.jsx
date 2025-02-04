@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Text, TextInput, View, StyleSheet } from "react-native";
-import Page from "../../../components/shared/page";
-import Header from "../../../components/shared/header";
-import { Input, Select } from "../../../components/shared/form";
-import { spacing } from "../../../style";
-import Button from "../../../components/shared/Button";
+import Page from "../../components/shared/page";
+import Header from "../../components/shared/header";
+import { Input, Select } from "../../components/shared/form";
+import { spacing } from "../../style";
+import Button from "../../components/shared/Button";
 
 const Informations = () => {
     const [info, setInfo] = useState({
@@ -40,7 +40,7 @@ const Informations = () => {
                     // error={"Ce champ est requis"}
                     onChange={(text) => setInfo({ ...info, telephone: text })}
                 />
-                <Button style={{marginTop:spacing.lg}}>Enrégistrer</Button>
+                <Button style={{ marginTop: spacing.lg }}>Enrégistrer</Button>
             </View>
         </Page>
     );
